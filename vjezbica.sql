@@ -39,36 +39,39 @@ insert into zupan (ime,prezime) values
 ('stojko','stojkic'),
 ('stena','black');
 
-insert into mjesto (naziv ) values
-('Osijek'),
-('Darda'),
-('Beli Manastir'),
-('Valpovo'),
-('Belisce'),
-('Bizovac'),
-('Vinkovci'),
-('Rokovci'),
-('Andrijasevci'),
-('Cerna'),
-('Otok'),
-('Ivankovo');
-
-insert into opcina (naziv) values
-('Antunovac'),
-('Bilje'), 
-('Bizovac'),
-('Čeminac'), ('Čepin'),
-('Darda');
+insert into zupanija (naziv,zupan ) values
+('Osječko-baranjska',1),
+('Vukovarsko-srijemska',2),
+('Sisačko-moslavačka',3),
+('Ličko-senjska',null),
+('Zagrebacka',null),
+('Krapinsko-zagorska',null);
 
 
+insert into opcina (naziv,zupanija ) values
+('Antunovac',1),
+('Bilje',2), 
+('Bizovac',1),
+('Čeminac',3),
+('Čepin',1),
+('Darda',3);
 
-insert into zupanija (naziv) values
-('Osječko-baranjska'),
-('Vukovarsko-srijemska'),
-('Sisačko-moslavačka'),
-('Ličko-senjska'),
-('Zagrebacka'),
-('Krapinsko-zagorska');
+insert into mjesto (naziv,opcina ) values
+('Osijek',1),
+('Darda',2),
+('Beli Manastir',3),
+('Valpovo',null),
+('Belisce',null),
+('Bizovac',null),
+('Vinkovci',null),
+('Rokovci',null),
+('Andrijasevci',null),
+('Cerna',null),
+('Otok',null),
+('Ivankovo',null);
+
+
+
 
 #select * from mjesto;
 
@@ -80,4 +83,6 @@ update mjesto set naziv='Sveti Rok'
 where sifra=8;
 
 select * from mjesto;
+select * from opcina;
+
 
